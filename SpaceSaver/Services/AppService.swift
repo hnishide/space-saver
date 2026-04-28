@@ -2,7 +2,7 @@ import AppKit
 import ApplicationServices
 import Cocoa
 import CoreGraphics
-import SwiftUICore
+import SwiftUI
 
 class AppService: ObservableObject {
   static let shared = AppService()
