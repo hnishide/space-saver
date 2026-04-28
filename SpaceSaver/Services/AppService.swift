@@ -2,8 +2,7 @@ import AppKit
 import ApplicationServices
 import Cocoa
 import CoreGraphics
-import SwiftUICore
-import FirebaseAnalytics
+import SwiftUI
 
 class AppService: ObservableObject {
   static let shared = AppService()
@@ -39,12 +38,6 @@ class AppService: ObservableObject {
 
   func openSpace(at index: Int) {
     let space = spaceList.data[index]
-    
-     // Track space opened event
-    Analytics.logEvent("space_opened", parameters: [
-        "space_name": space.name,
-        "window_count": space.windowList.count
-    ])
 
     guard let mainScreen = NSScreen.main else { return }
     let screenFrame = mainScreen.frame
@@ -125,11 +118,6 @@ class AppService: ObservableObject {
   }
 
   func saveToSpaceList() {
-    // Track space saved event  
-    Analytics.logEvent("space_saved", parameters: [
-        "window_count": spaceInfo.windowList.count
-    ])
-
     spaceList.data.insert(spaceInfo, at: 0)
     UserDefaultsHelper.spaceList = spaceList
 
