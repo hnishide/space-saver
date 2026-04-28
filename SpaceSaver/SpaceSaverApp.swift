@@ -8,7 +8,6 @@
 import Cocoa
 import Sparkle
 import SwiftUI
-import FirebaseCore
 
 class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, SPUUpdaterDelegate {
 	private var window: NSWindow?
@@ -18,9 +17,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, SPUUpdater
 		startingUpdater: true, updaterDelegate: nil, userDriverDelegate: nil)
 
 	func applicationDidFinishLaunching(_ notification: Notification) {
-
-		// Add firebase configuration
-		FirebaseApp.configure()
 
 		// Set the app to always use dark mode
 		NSApp.appearance = NSAppearance(named: .darkAqua)
