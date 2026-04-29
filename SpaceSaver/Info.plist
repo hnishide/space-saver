@@ -4,15 +4,5 @@
 <dict>
 	<key>LSBackgroundOnly</key>
 	<true/>
-	<key>SUPublicEDKey</key>
-	<string>hv0tfLcaGNlqbBXG3eCAMqPv16V8bByIRMrSCYbZA5E=</string>
-	<key>SUEnableInstallerLauncherService</key>
-	<true/>
-	<key>SUFeedURL</key>
-	<string>https://spacesaver.gurubag.com/appcast.xml</string>
-	<key>SUEnableAutomaticChecks</key>
-	<true/>
-	<key>SUAllowsAutomaticUpdates</key>
-	<true/>
 </dict>
 </plist>
