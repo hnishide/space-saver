@@ -6,15 +6,12 @@
 //
 
 import Cocoa
-import Sparkle
 import SwiftUI
 
-class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate, SPUUpdaterDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
 	private var window: NSWindow?
 	private var windowController: NSWindowController?
 	var statusItem: NSStatusItem?
-	let updaterController = SPUStandardUpdaterController(
-		startingUpdater: true, updaterDelegate: nil, userDriverDelegate: nil)
 
 	func applicationDidFinishLaunching(_ notification: Notification) {
 
